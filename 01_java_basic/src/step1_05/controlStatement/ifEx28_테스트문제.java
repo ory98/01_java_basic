@@ -26,6 +26,12 @@ public class ifEx28_테스트문제 {
 		Scanner scan = new Scanner(System.in);
 		Random ran = new Random();
 		
+		int meLeft = scan.nextInt();
+		
+		
+		
+		
+		
 		
 		
 		
