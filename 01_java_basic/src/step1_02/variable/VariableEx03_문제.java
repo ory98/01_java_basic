@@ -6,11 +6,6 @@ public class VariableEx03_문제 {
 		
 		//예) 현금이 10000원있다. 2800원짜리 과자 구입 후, 잔돈 출력
 		
-		int cash = 10000;
-		int snack = 2800;
-		int change = cash - snack;
-		System.out.println("잔돈 = " + change + "원");
-		
 		//문제1) 프리랜서의 세율은 3.3%이다. 월급이 2000000원일때 세금을 출력
 		
 		//문제2) 시험점수를 100, 88, 92점 을 받았다. 평균은?
