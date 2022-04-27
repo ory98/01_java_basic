@@ -1,3 +1,5 @@
+
+
 package step1_05.controlStatement;
 
 /*
@@ -21,8 +23,8 @@ public class IfEx11_문제 {
 		
 		System.out.println("=== 롯데리아 ===");
 		System.out.println("1.불고기 버거 : " + price1 + "원");
-		System.out.println("2.새우    버거 : " + price2 + "원");
-		System.out.println("3.콜         라 : " + price3 + "원");
+		System.out.println("2.새 우 버 거 : " + price2 + "원");
+		System.out.println("3.콜       라 : " + price3 + "원");
 
 
 	}

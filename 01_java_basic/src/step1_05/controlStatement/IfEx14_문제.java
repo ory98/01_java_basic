@@ -1,6 +1,7 @@
 package step1_05.controlStatement;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /*
  * # 코인 게임
@@ -15,11 +16,8 @@ public class IfEx14_문제 {
 	public static void main(String[] args) {
 		
 		Random ran = new Random();
-		
 		int coin = ran.nextInt(2);
-
-
-
+		
 
 	}
 

@@ -1,5 +1,7 @@
 package step1_05.controlStatement;
 
+import java.util.Random;
+import java.util.Scanner;
 
 /*
  * # 가운데 숫자 맞추기 게임
@@ -15,6 +17,7 @@ package step1_05.controlStatement;
 public class IfEx20_문제 {
 
 	public static void main(String[] args) {
+	
 		
 	}
 
