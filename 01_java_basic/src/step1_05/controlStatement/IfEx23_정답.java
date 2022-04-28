@@ -1,5 +1,7 @@
 package step1_05.controlStatement;
 
+import java.util.Random;
+import java.util.Scanner;
 
 /*
  * # 연산자 기호 맞추기 게임
@@ -17,6 +19,40 @@ package step1_05.controlStatement;
 public class IfEx23_정답 {
 
 	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		Random ran = new Random();
+		
+		System.out.println("연산자 기호 맞추기 게임\n");
+		
+		int x = ran.nextInt(10) + 1;
+		int y = ran.nextInt(10) + 1;
+		
+		int answer = ran.nextInt(4) + 1; 
+		
+		int z = 0; 
+		if (answer == 1) z = x+y;
+		if (answer == 2) z = x-y;
+		if (answer == 3) z = x*y;
+		if (answer == 4) z = x%y;
+		
+		System.out.println(x + " ? " + y  + " = " + z);
+		System.out.println("1)+  2)-  3)*  4)%");
+		
+		System.out.print("\n숫자 입력 : ");
+		int myAnswer = scan.nextInt();
+		
+		if (myAnswer == answer) System.out.println("정답");
+		else System.out.println("땡");
+		
+		scan.close();
+		
+		
+		
+		
+		 
+		
+		
 		
 	}
 

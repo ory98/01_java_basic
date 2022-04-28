@@ -1,5 +1,6 @@
 package step1_05.controlStatement;
 
+import java.util.Scanner;
 
 /*
  * # 지하철 요금 계산
@@ -18,6 +19,25 @@ package step1_05.controlStatement;
 public class IfEx22_정답 {
 
 	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("이용할 정거장 수 : ");
+		int useNum = scan.nextInt(); 
+		
+		int fee = 0;		
+		
+		if (useNum <= 5 && useNum > 0) fee = 500;
+		else if (useNum <= 10 && useNum > 5) fee = 600;
+		else if (useNum > 10) {
+			int add = useNum - 10;
+			if (add % 2 == 1) add++;
+			fee = 600 + add/2*50;
+		}
+		
+		System.out.println("정거장 요금 : " + fee + "원");
+		
+		scan.close();
 		
 	}
 
