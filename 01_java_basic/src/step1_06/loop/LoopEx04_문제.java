@@ -17,31 +17,6 @@ public class LoopEx04_문제 {
 
 	public static void main(String[] args) {
 		
-		Random ran = new Random();
-		Scanner scan = new Scanner(System.in);
-			
-		int score = 0;
-		int answerCnt = 0;
-		int i = 1;
-		
-		while (i <= 5) {
-			
-			int x = ran.nextInt(8) + 2;
-			int y = ran.nextInt(9) + 1;
-			int answer = x * y;
-			
-			System.out.print(x + "X" + y + " = ");
-			int myAnswer = scan.nextInt();
-			
-			if (answer == myAnswer) {
-				answerCnt++;
-			}
-			i++;	
-		}
-		score = answerCnt * 20;
-		System.out.print("성적 = " + score + "점");
-		
-		scan.close();
 		
 	}
 

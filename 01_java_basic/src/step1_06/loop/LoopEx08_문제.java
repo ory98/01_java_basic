@@ -45,7 +45,7 @@ public class LoopEx08_문제 {
 			System.out.print("메뉴 선택 : ");
 			int selectMenu = scan.nextInt();
 			
-			if (selectMenu == 1) {}
+			if      (selectMenu == 1) {}
 			else if (selectMenu == 2) {}
 			else if (selectMenu == 0) {
 				isRun = false;

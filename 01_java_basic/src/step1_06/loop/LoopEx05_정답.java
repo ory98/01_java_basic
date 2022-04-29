@@ -1,5 +1,7 @@
 package step1_06.loop;
 
+import java.util.Scanner;
+
 /*
  * # 영수증 출력[2단계]
  * 1. 5번 주문을 받는다.
@@ -27,14 +29,59 @@ public class LoopEx05_정답 {
 
 	public static void main(String[] args) {
 		
+		Scanner scan = new Scanner(System.in);
+		
 		int price1 = 8700;
 		int price2 = 6200;
 		int price3 = 1500;
+		int orderCnt1 = 0;
+		int orderCnt2 = 0;
+		int orderCnt3 = 0;
+		int i = 1;
 		
 		System.out.println("=== 롯데리아 ===");
 		System.out.println("1.불고기 버거 : " + price1 + "원");
 		System.out.println("2.새우    버거 : " + price2 + "원");
 		System.out.println("3.콜         라 : " + price3 + "원");
+		
+		while (i <= 5) {
+			
+			System.out.print("메뉴 선택 : ");
+			int choice = scan.nextInt();
+			
+			if      (choice == 1) orderCnt1++;
+			else if (choice == 2) orderCnt2++;
+			else if (choice == 3) orderCnt3++;
+			
+			i++;
+			
+		}
+		
+		int totalPrice = price1 * orderCnt1 + price2 * orderCnt2 + price3 * orderCnt3;
+		
+		System.out.println("총 금액 = " + totalPrice + "원");
+		System.out.print("현금 입력 : ");
+		int money = scan.nextInt();
+		
+		int charge = money - totalPrice;
+		
+		if (charge >= 0) {
+			
+			System.out.println("==== 롯데리아 영수증 ====");
+			System.out.println("1. 불고기 버거 : " + orderCnt1 + "개");
+			System.out.println("2. 새 우 버 거 : " + orderCnt2 + "개");
+			System.out.println("3. 콜       라 : " + orderCnt3 + "개");
+			System.out.println("4. 총   금  액 : " + totalPrice + "원");
+			System.out.println("5. 잔       돈 : " + charge + "원");
+			
+		}
+		else System.out.println("현금이 부족합니다");
+		
+		scan.close();
+		
+		
+		
+		
 
 	}
 
