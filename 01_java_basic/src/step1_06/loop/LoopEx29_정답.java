@@ -19,16 +19,19 @@ public class LoopEx29_정답 {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("정수 입력 : ");
-		int getPrimeNum = scan.nextInt();
-		int count = 0; 
+		int num = scan.nextInt();
+		int cnt = 0; 
 		
-		for (int i = 1; i <= getPrimeNum; i++) {
+		for (int i = 2; i <= num; i++) {
 			
+			cnt = 0;
+			for (int j = 1; j <= i; j++) {
+				if (i % j == 0) cnt++;
+			}
+			
+			if (cnt == 2) System.out.print(i + " ");
+
 		}
-		
-		
-		
-		
 	}
 	
 }

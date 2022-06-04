@@ -13,6 +13,26 @@ public class LoopEx12_정답 {
 
 	public static void main(String[] args) {
 		
+		int i = 1;
+		
+		while (i <= 50) {
+			
+			int loc10 = i / 10;
+			int loc1 = i % 10;
+			
+			int cnt369 = 0;
+			
+			if (loc10 != 0 && loc10 % 3 ==0) cnt369++;
+			if (loc1 != 0 && loc1 % 3 ==0) cnt369++;
+		
+			if 		(cnt369 == 2) System.out.print("짝짝 " );
+			else if (cnt369 == 1) System.out.print("짝 ");
+			else 				  System.out.print(i + " ");
+			
+			i++;
+			
+		}
+
 	}
 
 }

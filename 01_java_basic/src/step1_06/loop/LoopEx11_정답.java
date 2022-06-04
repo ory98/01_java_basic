@@ -1,6 +1,6 @@
 package step1_06.loop;
 
-
+import java.util.Scanner;
 
 /*
  * # 베스킨라빈스31
@@ -22,11 +22,48 @@ public class LoopEx11_정답 {
 
 	public static void main(String[] args) {
 		
+		Scanner scan = new Scanner(System.in);
+		
 		int p1 = 0;
 		int p2 = 0;
 		
 		int br = 0;
 		int turn = 0;
+		boolean isRun = true;
+		
+		System.out.println("베스킨라빈스31 게임");
+		System.out.println();
+		
+		while (isRun) {
+			
+			if (turn % 2 == 0) {
+				System.out.print("[br:" + br + "] p1(1~3) 입력 :");
+				p1 = scan.nextInt();
+				br += p1;
+			}
+			
+			else {
+				System.out.print("[br:" + br + "] p2(1~3) 입력 :");
+				p2 = scan.nextInt();
+				br += p2;
+			}
+			
+			turn++;
+			
+			System.out.println();
+			if (br >= 31) {
+				
+				if (turn % 2 == 0) {
+					System.out.println("p2 승리");
+				}
+				else System.out.println("p1 승리");
+				
+				isRun = false;
+				System.out.println();
+				System.out.println("게임 종료");
+			}
+			
+		}
 
 	}
 

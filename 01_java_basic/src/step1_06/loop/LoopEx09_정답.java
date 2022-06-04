@@ -42,11 +42,50 @@ public class LoopEx09_정답 {
 			
 			System.out.print("메뉴 선택 : ");
 			int selectMenu = scan.nextInt();
+			int money = 0;
 			
-			if (selectMenu == 1) {}
-			else if (selectMenu == 2) {}
-			else if (selectMenu == 3) {}
-			else if (selectMenu == 4) {}
+			if (selectMenu == 1) { 
+				System.out.print("입금할 금액 입력 : ");
+				money = scan.nextInt();
+				myMoney += money;	
+				System.out.println("입금을 완료하였습니다. (잔액 : " + myMoney + "원)");
+			}
+			
+			else if (selectMenu == 2) {
+				System.out.print("출금할 금액 입력 : ");
+				money = scan.nextInt();
+				
+				if (money <= myMoney) { 
+					myMoney -= money;
+					System.out.println("출금을 완료하였습니다. (잔액 : " + myMoney + "원)");
+				}
+				else System.out.println("잔액 부족 (잔액 : " + myMoney + "원)");
+			}
+			
+			else if (selectMenu == 3) {
+				System.out.println("이체할 계좌 입력 : ");
+				int acc = scan.nextInt();
+				
+				if (acc == yourAcc) {
+					System.out.println("이체할 금액 입력 : ");
+					money = scan.nextInt();
+					
+					if (money <= myMoney) { 
+						myMoney -= money;
+						yourMoney += money;
+						System.out.println("잔액 : " + myMoney + "원");
+					}
+					else System.out.println("출금 불가 (잔액 : " + myMoney + "원)");
+				}
+				
+				else System.out.println("계좌번호 확인");
+				
+			}
+			else if (selectMenu == 4) {
+				System.out.println("myMoney : " + myMoney + "원");
+				System.out.println("yourMoney : " + yourMoney + "원");
+				
+			}
 			else if (selectMenu == 0) {
 				isRun = false;
 				System.out.println("프로그램 종료");

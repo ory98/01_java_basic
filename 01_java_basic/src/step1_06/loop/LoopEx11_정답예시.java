@@ -46,8 +46,8 @@ public class LoopEx11_정답예시 {
 			}
 			
 			turn++;
-			System.out.println("br = " + br);
 			
+			System.out.println("br = " + br);
 			if (br >= 31) {
 				
 				if (turn % 2 == 0) System.out.println("[p1]승리");

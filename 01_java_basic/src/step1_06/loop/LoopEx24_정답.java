@@ -30,18 +30,28 @@ public class LoopEx24_정답 {
 		for (int i = 1; i < 11; i++) {
 			
 			int score = ran.nextInt(100) + 1;
-			System.out.println(score + " ");
+			System.out.print(score + " ");
 			
 			totalScore += score;
 			
+			if (score >= 60) {
+				passStudentCnt++;
+			}
 			
-			
-			
-			
-			
-			
+			if (score > maxScore) {
+				maxScore = score;
+				maxNum = i;
+			}
 		}
+		System.out.println();
+			
+		avg = totalScore / 10.0;
 		
+		System.out.println();
+		System.out.println("총점 : " + totalScore + "점");
+		System.out.println("평균 : " + avg + "점");
+		System.out.println("합격자 수 : " + passStudentCnt);
+		System.out.println("1등 학생 : " + maxScore + "점 [번호:" + maxNum + "]");
 
 	}
 

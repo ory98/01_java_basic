@@ -1,5 +1,7 @@
 package step1_06.loop;
 
+import java.util.Scanner;
+
 /*
  * # 소수찾기[1단계]
  * 
@@ -19,6 +21,26 @@ public class LoopEx13_정답 {
 
 	public static void main(String[] args) {
 		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("소수 입력 : ");
+		int num = scan.nextInt();
+		
+		int cnt = 0;
+		int i = 1;
+		
+		while (i <= num) {
+			
+			if (num % i == 0) {
+				cnt++;
+			}
+			i++;
+		}
+		
+		if (cnt == 2) System.out.println(num + " : 소수");
+		else 		  System.out.println(num + " : 소수x");
+		
+		scan.close();
 
 	}
 

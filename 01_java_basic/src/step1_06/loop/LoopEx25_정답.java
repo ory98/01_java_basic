@@ -1,5 +1,7 @@
 package step1_06.loop;
 
+import java.util.Scanner;
+
 /*
  * # 최대값 구하기[2단계]
  * 
@@ -11,6 +13,25 @@ package step1_06.loop;
 public class LoopEx25_정답 {
 
 	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int maxNum = 0;
+		
+		
+		for (int i = 1; i <= 3; i++) {
+			
+			System.out.print("정수" + i + " 입력 : ");
+			int num = scan.nextInt();
+			
+			if (num > maxNum) {
+				maxNum = num;
+			}
+	
+		}
+		
+		System.out.println("최대값 : " + maxNum);
+		
+		scan.close();
 		
 	}
 
