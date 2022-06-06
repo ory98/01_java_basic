@@ -31,8 +31,7 @@ public class IfEx27_문제 {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("월 입력: ");
 		int getMonth = scan.nextInt();
-		
-	
+
 		scan.close();
 
 	}

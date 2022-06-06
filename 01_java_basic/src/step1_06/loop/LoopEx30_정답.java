@@ -22,18 +22,18 @@ public class LoopEx30_정답 {
 
 	public static void main(String[] args) {
 		
-		int start = 1;
-		int end = 5;
+		int start = 1; // 시작점과 
+		int end = 5;   // 끝점 지정 
 		
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 5; i++) { // 길이 정하기 
 			
-			if (i % 2 == 0) {
-				for (int j = start; j <= end ; j++) {
+			if (i % 2 == 0) { // 0번째 , 2번째, 4번째 
+				for (int j = start; j <= end ; j++) { // 1-5 , 11-15 , 21-25 
 					System.out.print(j + "\t");
 				}
 			}
-			else {
-				for (int j = end; j >= start; j--) {
+			else { // 1번째, 3번째
+				for (int j = end; j >= start; j--) { // 6-10 , 16-20
 					System.out.print(j + "\t");
 				}
 			}

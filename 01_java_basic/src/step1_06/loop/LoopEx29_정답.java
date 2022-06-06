@@ -26,7 +26,7 @@ public class LoopEx29_정답 {
 			
 			cnt = 0;
 			for (int j = 1; j <= i; j++) {
-				if (i % j == 0) cnt++;
+				if (i % j == 0) cnt++; // ex) 6/1 ,6/2 , 6/3 ...
 			}
 			
 			if (cnt == 2) System.out.print(i + " ");

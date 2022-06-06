@@ -1,5 +1,6 @@
 package step1_06.loop;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -23,10 +24,11 @@ public class LoopEx16_테스트문제 {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
+		Random ran = new Random();
 		
 		// 목적지(destination)
-		int desX = 0;
-		int desY = 0;
+		int desX = ran.nextInt(21) - 10;
+		int desY = ran.nextInt(21) - 10;
 		
 		// 현재 위치
 		int x = 0;
@@ -60,9 +62,12 @@ public class LoopEx16_테스트문제 {
 			int selectMenu = scan.nextInt();
 			
 			if (selectMenu == 1) {
-				System.out.println("방향을 선택해주세요. : ");
+				System.out.println("방향을 선택해주세요.(1~4) : ");
+				
 			}
-			else if (selectMenu == 2) {}
+			else if (selectMenu == 2) {
+				System.out.println("속도를 선택해주세요. : ");
+			}
 			else if (selectMenu == 3) {}
 			
 		}
